@@ -1,0 +1,1297 @@
+@font-face {
+  font-family: "ClanPro-News";
+  src: url("./fonts/ClanPro-News.otf");
+}
+
+@font-face {
+  font-family: "Moon2.0-Bold";
+  src: url("./fonts/Moon2.0-Bold.otf");
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url("./fonts/Georgia.ttf");
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;}
+
+#contenedor-grid{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 120px 1fr 200px;
+  grid-template-areas: "header"
+                       "main"
+                       "footer";}
+  
+header{
+  width: 100%;
+  height: 120px;
+  grid-area: header;
+  background-color: white;
+  position: fixed;
+  z-index: 200;
+}
+
+/* ...........MENU CELULAR........... */
+
+.nav-cel{
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  visibility: hidden;
+}
+
+.logo2 img{
+  width: 200px; 
+  margin-left: 40px;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: absolute;
+  width: 36px;
+  height: 30px;
+  top: 45px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #ecaca2;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background:white;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #ecaca2;
+  padding: 2px 1.5px 0;
+  width: 230px;
+  margin-left: -23px;
+  margin-top: -20px;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item {
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  font-family: 'ClanPro-News', sans-serif;
+  font-size: 30px;
+  outline: none;
+}
+
+/* Individual item */
+.bm-item-list{
+  margin-left: 0px;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  margin-top: -20px;
+}
+
+/* ...........TERMINA MENU CELULAR........... */
+
+nav{
+  width: 100%;
+  margin: auto;
+  margin-top: 2%;
+  position: fixed;
+}
+
+nav ul{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul li a{
+  font-family: 'ClanPro-News', sans-serif;
+  font-size: 20px;
+  color: #1d1d1b;
+  text-decoration: none;
+}
+
+nav ul li{
+  font-family: 'ClanPro-News', sans-serif;
+  font-size: 20px;
+  color: #ecaca2;
+  text-decoration: none;
+}
+
+nav ul li a:hover{
+  color: #ecaca2;
+}
+
+.logo img{
+  display: block;
+  width: 70%;
+  margin: auto;
+}
+
+#buscar-icono{
+  width: 30px;
+  height: 30px;
+  background: url("/img/icono-buscar.png");
+  background-size: cover;
+}
+
+#carrito-icono{
+  width: 30px;
+  height: 30px;
+  background: url("/img/icono-carrito.png");
+  background-size: cover;
+  margin-top: 0px;
+}
+
+#numero-carrito{
+  width: 20px;
+  height: 20px;
+  background-color: #ecaca2;
+  border-radius: 100px;
+  margin-left: 20px;
+  position: relative;
+}
+.count{
+  font-size: 18px;
+  color: black;
+  position: absolute;
+  left: 20%;
+}
+
+main{
+  grid-area: main;
+  display: grid;
+  gap: 80px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1.6fr 1.3fr 0.7fr;
+  grid-template-areas: "portada"
+                       "section1"
+                       "section2"
+                       "section3";
+}
+
+.portada{
+  grid-area: portada;
+  width: 100%;
+  height: 400px;
+  background: url("/img/portada.png");
+  background-position: center;
+  background-size: cover;
+}
+
+
+.contenido-1{
+  grid-area: section1;
+  background-color: white;
+  position: relative;
+}
+
+.fondo-verde{
+  display: grid; 
+  min-height: 475px;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: "columna1 columna2";
+  background-color: #c7d2c1;
+  position: absolute;
+  bottom: 10%;
+}
+
+.foto-nosotras{
+  position: absolute;
+  z-index: 100;
+  right: 15%; 
+  top: 5%;
+  width: 30%;
+}
+
+
+#info{
+  grid-area: columna1;
+  width: 70%;
+  margin-left: 8%;
+}
+
+#info h2{
+  font-family: 'Moon2.0-Bold';
+  letter-spacing: 2px;
+  font-size: 20px;
+  padding: 20px;
+  margin-top: 10%;
+
+}
+
+#info p{
+  font-family: 'Georgia';
+  font-style: italic;
+  font-size: 25px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+#info a{
+  width: 130px;
+  font-family: 'Moon2.0-Bold';
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-align: center;
+  color: white;   
+  margin-left: 20px;
+  margin-top: 40px;
+  display: block;
+  background-color: #ecaca2;
+  padding: 5px;
+}
+
+@keyframes vermas {
+  50% {
+      transform: scale(1.1);
+  }
+}
+
+#info a:hover{
+  animation-name: vermas;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
+  background-color:#4c665b
+}
+
+#contenido-1-fondo{
+  grid-area: columna2;
+  background: url("/img/contenido-1-fondo.png");
+  background-size: cover;
+}
+
+#contenido-1-fondo img{
+  width: 100%;
+  display: block;
+}
+
+.contenido-2{
+  grid: section2;
+}
+
+.contenido-2 h3{
+  font-family: 'Moon2.0-Bold';
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 30px;
+}
+
+#contenedor-tarjetas{
+  width: 80%;
+  margin: auto;
+  margin-top: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tarjeta-destacados{
+  width: 25%;
+  margin: 20px;
+}
+
+.img-tarjeta img{
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.body-tarjeta{
+  height: 75px;
+  background-color: #c7d2c1;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.body-tarjeta:hover{
+  background-color: #ecaca2;
+}
+
+.body-tarjeta:hover a{
+  color: white;
+}
+
+.body-tarjeta a{
+  text-decoration: none;
+  font-family: 'Georgia';
+  font-style: italic;
+  color: black;
+  font-size: 22px;
+}
+
+.body-tarjeta a:hover{
+  color: white;
+}
+
+.contenido-3{
+  grid-area: section3;
+  border-top: 3px solid black;
+}
+
+.contenido-3 h3{
+  font-family: 'Moon2.0-Bold';
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.contenido-3 h3 a{
+  max-width: 80%;
+  margin: auto;
+  text-decoration: none;
+  color: black;
+  display: block;
+  margin-top: 20px;
+  animation-name: vermas;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.contenido-3 h3 a:hover{
+  color: #ecaca2;
+}
+
+
+
+.contenedor-img-instagram ul{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+ 
+}
+
+
+.img-instagram img{
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+  display: block;
+}
+
+footer{
+  grid-area: footer;
+  background-color: #4c665b;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.info-footer{
+  width: 70%;
+  margin: auto;
+}
+
+.logo-footer img{
+  width: 20%;
+  margin: auto;
+  display: block;
+}
+
+.derechos{
+  width: 70%;
+  height: 10%;
+  margin: auto;
+  border-bottom: 2px solid white;
+}
+
+.derechos p{
+  text-align: center;
+  font-family: sans-serif;
+  color: white;
+  padding: 15px;
+}
+
+.redes ul{
+  width: 30%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.redes ul li a{
+  height: 34px;
+  width: 34px;
+  background-size: cover;
+  display: block;
+  margin: auto;
+}
+
+.instagram a{
+  background-image: url("/img/pie-icon1.png");   
+}
+
+.instagram a:hover{
+  background-image: url("/img/pie-icon1-b.png");   
+}
+
+.facebook a{
+  background-image: url("/img/pie-icon2.png");
+}
+
+.facebook a:hover{
+  background-image: url("/img/pie-icon2-b.png");
+}
+
+.mail a{
+  background-image: url("/img/pie-icon3.png");
+}
+
+.mail a:hover{
+  background-image: url("/img/pie-icon3-b.png");
+}
+
+
+/* ...........SHOP.HTML........... */
+
+#shop{
+  grid-area: main;
+  display: grid;
+  gap: 80px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.6fr 0.9fr 2fr;
+  grid-template-areas: "portada"
+                       "section1-shop"
+                       "section2-shop";
+}
+
+.portada-shop{
+  grid-area: portada;
+  width: 100%;
+  height: 400px;
+  background: url("/img/portada-shop.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.contenido-1-shop{
+  grid-area: section1-shop;
+}
+
+#contenedor-menu-shop{
+  background-color: white;
+  width: 90%;
+  margin: auto;
+  margin-top: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu-shop {
+  width: 30%;
+  text-align: center;}
+
+.menu-shop img{
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.menu-shop a{
+  font-family: 'Moon2.0-Bold';
+  letter-spacing: 10px;
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+  margin-top: 30px;
+  display: block;
+  padding-bottom: 30px;
+}
+
+.menu-shop a:hover{
+  color: #ecaca2;
+}
+
+.contenido-2-shop{
+  grid-area: section2-shop;
+  background-color: #ece9e9;
+}
+
+.titulo-shop{
+  width: 100%;
+  height: 90px;
+  background-color: #c7d2c1;
+}
+
+.titulo-shop h4{
+  font-family: 'Moon2.0-Bold';
+  letter-spacing: 10px;
+  font-size: 50px;
+  text-align: center;
+  line-height: 90px;
+  color: white;
+}
+
+.contenedor-tarjetas-shop{
+  width: 90%;
+  margin: auto;
+  margin-top: 3%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.tarjeta-shop{
+  width: 28%;
+  margin: 20px;
+  text-align: center;
+  background-color: white;
+}
+
+.img-tarjeta-shop img{
+  max-width: 80%;
+  max-height: 80%;
+  display: block;
+  margin: auto;
+  margin-top: 10%;
+
+}
+
+.body-tarjeta-shop{
+  height: 90px;
+}
+
+.body-tarjeta-shop h5{
+  font-family: 'Georgia';
+  font-style: italic;
+  color: black;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.body-tarjeta-shop p{
+  font-family: sans-serif;
+  color: black;
+  font-size: 14px;
+  padding: 4px;
+}
+
+.body-tarjeta-shop a{
+  font-family: 'Moon2.0-Bold';
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: white;   
+  background-color: #ecaca2;
+  display: block;
+  margin: auto;
+  padding: 4px;
+  margin-top: 5px;
+}
+
+.body-tarjeta-shop a:hover{
+  animation-name: vermas;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
+  background-color:#4c665b
+}
+
+
+/* ...........PRODUCTO.HTML........... */
+
+#producto{
+  grid-area: main;
+  display: grid;
+  gap: 80px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.9fr;
+  grid-template-areas: "section1-producto"
+                       "section2-producto";
+}
+
+.contenedor-info-producto{
+  grid-area: section1-producto;
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.info-producto{
+  width: 40%;
+  margin-top: 40px;
+}
+
+.tepuede-interesar{
+  grid-area: section2-producto;
+  width: 100%;
+  margin-top: 20px;
+  
+}
+
+.tepuede-interesar-tarjetas{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+
+}
+
+.tepuede-interesar h4{
+  font-family: 'Moon2.0-Bold';
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 30px;
+} 
+
+.galeria-producto{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.foto-principal img{
+  width: 95%;
+  margin: auto;
+  height: 650px;
+  display: block;
+  margin-bottom: 40px;
+  background-color: brown;
+}
+
+
+.fotos-secundarias img{
+  width: 200px;
+  height: 200px;
+  background-color: chartreuse;
+}
+
+/* descripcion producto */
+
+.contenedor-nombre h3{
+  font-family: 'Georgia';
+  font-style: italic;
+  font-size: 30px;
+  padding-top: 20px;
+  color: #232323;
+
+}
+
+.contenedor-nombre p{
+  font-family: 'ClanPro-News';
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color: #232323;
+
+}
+
+.contenedor-talles{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: start;
+  border-top: 1px solid black;
+  padding-top: 20px;
+  font-family: 'ClanPro-News';
+  font-size: 15px;
+  padding-bottom: 20px;
+  color: #232323;
+}
+
+.contenedor-talles p{
+  padding: 10px;
+}
+
+.contenedor-talles-botones{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-around;
+  margin-left: 20px;
+}
+
+.boton-talle{
+  width: 40px;
+  padding: 10px;
+  margin-right: 8px;
+  border: 1px solid black;
+  text-align: center;
+  background-color: white;
+  cursor: pointer;
+}
+
+.boton-talle:hover{
+  color: #ecaca2;
+  border: 1px solid #ecaca2;
+}
+
+.contenedor-cantidad-anadir{
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  border-top: 1px solid black;
+  padding-bottom: 20px;
+  font-family: 'ClanPro-News', sans-serif;
+  font-size: 20px;
+  color: #232323;
+}
+
+.descripcion{
+  padding-top: 20px;
+  border-top: 1px solid black;
+}
+
+.descripcion h4{
+  font-family: 'Moon2.0-Bold';
+  letter-spacing: 2px;
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #232323;
+}
+
+.descripcion p{
+  font-family: 'ClanPro-News', sans-serif;
+  font-size: 20px;
+  color: #232323;
+}
+
+.numero{
+  width: 80px;
+  text-align: center;
+
+}
+
+
+.anadir-boton{
+  background-color: white;
+  color: #232323;
+  border: 1px solid #232323;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+.anadir-boton:hover{
+  color: #ecaca2;
+  border: 1px solid #ecaca2;
+}
+
+.anadir-boton i{
+  margin-right: 15px;
+}
+
+
+/* ventana emergente carrito */
+
+#carrito{
+  visibility: hidden;
+  position: absolute;
+  background-color: white;
+  width: 280px;
+  margin-left: -220px;
+  margin-top: 47px;
+  border: 0.5px solid #232323;
+}
+
+.info-carrito{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  font-family: 'ClanPro-News', sans-serif;
+  font-size: 14px;
+  color: #232323;
+  margin-top: 15px;
+  text-align: left;
+
+}
+
+.img-producto-carrito img{
+  width: 60px;
+  height: 60px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  
+}
+
+.precio-total-carrito{
+  width: 90%;
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-top: 1px solid #232323;
+  border-bottom: 1px solid #232323;
+  margin: auto;
+
+}
+
+.ver-carrito{
+  width: 60%;
+  background-color: white;
+  color: #232323;
+  border: 1px solid #232323;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  margin: auto;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.ver-carrito:hover{
+  color: #ecaca2;
+  border: 1px solid #ecaca2;
+}
+
+/* CARRITO.JSX - checkout  */
+
+#carrito-grande{
+  grid-area: main;
+  display: grid;
+  gap: 60px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "portada"
+                       "checkout";
+}
+
+.portada-shop{
+  grid-area: portada,
+}
+
+.contenedor-carrito{
+  width: 100%;
+  grid-area: checkout;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 60px;
+}
+
+#contenedor-articulo{
+  width: 60%;
+}
+
+
+.articulo ul{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+  font-family: 'ClanPro-News', sans-serif;
+  font-size: 15px;
+  color: #232323;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #232323;
+}
+
+.articulo ul li {
+  width: 132px;
+  text-align: center;
+}
+
+.cupon{
+  width: 100%;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.cupon-input{
+  height: 50px;
+}
+
+
+.checkout{
+  width: 35%;
+  font-family: 'ClanPro-News', sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+.subtotal{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #232323;
+  border-bottom: 1px solid #232323;
+}
+
+.total{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.tu-compra{
+  font-family: 'Moon2.0-Bold';
+  font-size: 25px;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.articulo-pasar ul{
+  width: 100%;
+  grid-area: checkout;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  font-family: 'ClanPro-News', sans-serif;
+  font-size: 15px;
+  color: #232323;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #232323;
+  border-bottom: 1px solid #232323;
+}
+
+.articulo-pasar ul li{
+ 
+  width: 132px;
+  margin: auto;
+  text-align: center;
+}
+
+.numero{
+  height: 50px;
+}
+
+#margen{
+  margin-top: 15px;
+}
+
+#compra{
+  grid-area: main;
+  display: grid;
+  gap: 60px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.5fr;
+  grid-template-areas: "portada"
+                       "compra";
+}
+
+.compra-finalizada{
+  grid-area: compra,
+
+}
+
+.tarjeta-compra{
+  width: 40%;
+  height: 200px;
+  margin: auto;
+  margin-bottom: 60px;
+  background-color: #ecaca2;
+  text-align: center;
+}
+
+.tarjeta-compra h3{
+  font-family: 'ClanPro-News';
+  font-size: 25px;
+  padding-top: 40px;
+}
+
+.tarjeta-compra p{
+  font-family: 'ClanPro-News';
+  font-size: 20px;
+  padding-top: 20px;
+}
+
+.cargando{
+  width: 100%;
+  text-align: center;
+}
+
+.cargando p{
+  font-size: 30px;
+  padding-top: 50px;
+}
+
+
+@media (max-width: 650px) {
+  main{
+      grid-area: main;
+      display: grid;
+      gap: 70px;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.9fr 0.2fr 2fr 0.4fr;
+      grid-template-areas: "portada"
+                           "section1"
+                           "section2"
+                           "section3";
+  }
+
+  #nav-pc{
+      display: none;
+  }
+
+  .nav-cel{
+      visibility: visible;
+  }
+
+  .portada{
+      height: 500px;
+      background: url("/img/portada-cel.jpg");
+      background-position: center;
+      background-size: cover;}
+
+  .foto-nosotras{
+      display: none;
+  }
+
+  .fondo-verde{
+      min-height: 375px;
+  }
+
+  #info p{
+      font-size: 15px;
+  }
+
+  #contenedor-tarjetas{
+      flex-direction: column;
+  }
+
+  .tarjeta-destacados{
+      width: 100%;
+      margin: 35px;
+  }
+
+  .img-instagram img{
+      width: 90px;
+      height: 90px;
+  }
+
+  #ocultar{
+      display: none;
+  }
+
+  .logo-footer img{
+      width: 40%;
+      padding-top: 20px;
+  }
+
+  .derechos{
+      width: 100%;
+  }
+
+  .derechos p{
+      font-size: 14px;
+  }
+
+
+  #shop{
+      grid-area: main;
+      display: grid;
+      gap: 80px;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.2fr 0.6fr 2fr;
+      grid-template-areas: "portada"
+                           "section1-shop"
+                           "section2-shop";
+  }
+
+
+  #contenedor-menu-shop{
+      flex-direction: column;
+  }
+
+  .menu-shop{
+      width: 100%;
+  }
+
+  .contenedor-tarjetas-shop{
+      flex-direction: column;
+  }
+
+  .tarjeta-shop{
+      width: 100%;
+      margin: auto;
+      margin-top: 40px;
+  }
+
+  #producto{
+  grid-area: main;
+  display: grid;
+  gap: 60px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 1fr;
+  grid-template-areas: "section1-producto"
+                       "section2-producto";
+}
+
+  .contenedor-info-producto{
+  grid-area: section1-producto;
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  }
+
+  .galeria-producto{
+  width: 90%;
+  margin: auto;
+}
+
+  .fotos-secundarias{
+    display: none;
+  }
+
+  .info-producto{
+  width: 90%;
+  margin-top: 0px;
+  margin: auto;
+  text-align: center;
+}
+
+.foto-principal img{
+  width: 95%;
+  margin: auto;
+  height: 350px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.contenedor-talles ul{
+  margin: auto;
+  
+}
+
+
+.contenedor-cantidad-anadir{
+  width: 90%;
+  margin: auto;
+
+}
+
+.tepuede-interesar h4{
+  width: 90%;
+  margin: auto;
+} 
+
+#carrito-grande{
+  grid-area: main;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1.5fr;
+  grid-template-areas: "portada"
+                       "checkout";
+}
+
+.contenedor-carrito{
+  width: 90%;
+  margin:auto;
+  grid-area: checkout;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 60px;
+}
+
+#contenedor-articulo{
+  width: 100%;
+}
+
+.checkout{
+  width: 90%;
+  margin:auto;
+}
+
+.cupon{
+  margin-bottom: 40px;
+}
+
+.cupon-input{
+  width: 40%;
+  height: 50px;
+}
+
+.borrar{
+  display: none;
+}
+
+.articulo-pasar ul li{
+  width: 100px;
+  margin: auto;
+  text-align: center;
+
+}
+
+.articulo ul li{
+  width: 100px;
+}
+
+}
